@@ -37,9 +37,9 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="testimoni" className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, #0f0f1a 0%, #111127 100%)' }}>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent" />
-      <div className="absolute bottom-1/3 right-0 w-[400px] h-[400px] rounded-full bg-primary-600/5 blur-[120px] pointer-events-none" />
+    <section id="testimoni" className="relative py-24 lg:py-32 overflow-hidden bg-white">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent-200/50 to-transparent" />
+      <div className="absolute bottom-1/3 right-0 w-[400px] h-[400px] rounded-full bg-primary-100/20 blur-[120px] pointer-events-none" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Header */}
@@ -49,16 +49,16 @@ export default function Testimonials() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-sm font-medium mb-6">
-            <Star className="w-4 h-4 fill-amber-400" />
-            Testimoni
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100/50 border border-amber-200 text-amber-700 text-sm font-medium mb-6">
+            <Star className="w-4 h-4 fill-amber-500" />
+            TESTIMONIALS
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Apa Kata{' '}
-            <span className="text-gradient">Mereka?</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            What our{' '}
+            <span className="text-primary-600">users say</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Pendapat dari sekolah dan orang tua yang sudah merasakan manfaat Sihadir.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Feedback from schools and parents who've experienced Sihadir's benefits.
           </p>
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function Testimonials() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + index * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="group relative h-full p-6 rounded-2xl bg-dark-800/40 border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 backdrop-blur-sm hover:-translate-y-1">
+              <div className="group relative h-full p-6 rounded-2xl bg-white/50 border border-gray-200/50 hover:border-gray-300 transition-all duration-500 backdrop-blur-sm hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
                 {/* Background glow */}
                 <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
@@ -84,19 +84,19 @@ export default function Testimonials() {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-sm text-muted-400 leading-relaxed mb-6 italic">
+                  <p className="text-sm text-gray-700 leading-relaxed mb-6 italic">
                     "{item.text}"
                   </p>
 
                   {/* Author */}
-                  <div className="flex items-center gap-3 pt-4 border-t border-white/[0.06]">
-                    <div className={`w-11 h-11 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-sm font-bold text-white shadow-lg`}>
+                  <div className="flex items-center gap-3 pt-4 border-t border-gray-200/50">
+                    <div className={`w-11 h-11 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-sm font-bold text-white shadow-md`}>
                       {item.avatar}
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-white">{item.name}</div>
-                      <div className="text-xs text-muted-400">{item.role}</div>
-                      <div className="text-xs text-primary-400">{item.school}</div>
+                      <div className="text-sm font-semibold text-gray-900">{item.name}</div>
+                      <div className="text-xs text-gray-600">{item.role}</div>
+                      <div className="text-xs text-primary-600">{item.school}</div>
                     </div>
                   </div>
                 </div>

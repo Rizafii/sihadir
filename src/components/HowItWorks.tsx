@@ -42,10 +42,10 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="cara-kerja" className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, #111127 0%, #0f1521 50%, #0d1117 100%)' }}>
+    <section id="cara-kerja" className="relative py-24 lg:py-32 overflow-hidden bg-white">
       {/* Background elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary-600/5 blur-[150px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-emerald-200/50 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary-100/20 blur-[150px] pointer-events-none" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Section header */}
@@ -55,18 +55,18 @@ export default function HowItWorks() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-16 lg:mb-24"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Mudah & Cepat
+            HOW IT WORKS
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Cara Kerja{' '}
-            <span className="text-gradient-warm">Sihadir</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Simple as{' '}
+            <span className="text-primary-600">1, 2, 3</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Proses absensi yang simple dan cepat — hanya dalam hitungan detik, kehadiran tercatat dan terkonfirmasi.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            A streamlined process that takes just seconds — capture, verify, and record attendance instantly.
           </p>
         </motion.div>
 
@@ -78,7 +78,7 @@ export default function HowItWorks() {
               initial={{ scaleX: 0 }}
               animate={isInView ? { scaleX: 1 } : {}}
               transition={{ delay: 0.3, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className="h-full bg-gradient-to-r from-primary-500/40 via-accent-500/40 to-emerald-500/40 origin-left"
+              className="h-full bg-gradient-to-r from-primary-300/60 via-accent-300/60 to-emerald-300/60 origin-left"
             />
           </div>
 
@@ -99,21 +99,21 @@ export default function HowItWorks() {
                 <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-0">
                   {/* Step circle */}
                   <div className="relative flex-shrink-0">
-                    <div className={`w-[60px] h-[60px] rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-xl ${step.glowColor} z-10 relative`}>
+                    <div className={`w-[60px] h-[60px] rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg ${step.glowColor} z-10 relative`}>
                       <step.icon className="w-7 h-7 text-white" />
                     </div>
                     {/* Number badge */}
-                    <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-dark-800 border border-white/10 flex items-center justify-center text-[10px] font-bold text-white font-display z-20">
+                    <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[10px] font-bold text-gray-900 font-display z-20">
                       {step.number}
                     </div>
                   </div>
 
                   {/* Content */}
                   <div className="lg:text-center lg:mt-6">
-                    <h3 className="text-lg font-bold font-display text-white mb-2">
+                    <h3 className="text-lg font-bold font-display text-gray-900 mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-muted-400 leading-relaxed max-w-xs">
+                    <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
                       {step.description}
                     </p>
                   </div>

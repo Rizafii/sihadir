@@ -78,11 +78,11 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="fitur" className="relative py-24 lg:py-32" style={{ background: 'linear-gradient(180deg, #0f0f1a 0%, #111127 100%)' }}>
+    <section id="fitur" className="relative py-24 lg:py-32 bg-white">
       {/* Background decoration */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent-500/20 to-transparent" />
-      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-primary-600/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] rounded-full bg-accent-500/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary-200/50 to-transparent" />
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-primary-100/20 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-[300px] h-[300px] rounded-full bg-accent-100/20 blur-[100px] pointer-events-none" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Section header */}
@@ -92,18 +92,18 @@ export default function Features() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-16 lg:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-300 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-medium mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            Fitur Unggulan
+            FEATURES
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Teknologi Canggih untuk{' '}
-            <span className="text-gradient">Absensi Modern</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Everything you need to{' '}
+            <span className="text-primary-600">succeed</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Sihadir menghadirkan fitur-fitur terbaik yang dirancang khusus untuk kebutuhan absensi sekolah di era digital.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Maximize success with our flexible product features. Customize, stay compatible across platforms, and receive reliable support for optimized performance.
           </p>
         </motion.div>
 
@@ -116,20 +116,20 @@ export default function Features() {
         >
           {features.map((feature) => (
             <motion.div key={feature.title} variants={cardVariants} className={feature.span}>
-              <div className="group relative h-full p-6 lg:p-7 rounded-2xl bg-dark-800/50 border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 overflow-hidden hover:-translate-y-1">
+              <div className="group relative h-full p-6 lg:p-7 rounded-2xl bg-white/50 border border-gray-200/50 hover:border-gray-300 transition-all duration-500 overflow-hidden hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
                 {/* Background gradient */}
                 <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
                 <div className="relative z-10">
                   {/* Icon */}
-                  <div className={`w-12 h-12 ${feature.large ? 'lg:w-16 lg:h-16' : ''} rounded-xl bg-gradient-to-br ${feature.iconGradient} flex items-center justify-center mb-5 shadow-lg shadow-black/20`}>
+                  <div className={`w-12 h-12 ${feature.large ? 'lg:w-16 lg:h-16' : ''} rounded-xl bg-gradient-to-br ${feature.iconGradient} flex items-center justify-center mb-5 shadow-md shadow-black/10`}>
                     <feature.icon className={`${feature.large ? 'w-6 h-6 lg:w-8 lg:h-8' : 'w-6 h-6'} text-white`} />
                   </div>
 
-                  <h3 className={`font-display font-bold text-white mb-2.5 ${feature.large ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
+                  <h3 className={`font-display font-bold text-gray-900 mb-2.5 ${feature.large ? 'text-xl lg:text-2xl' : 'text-lg'}`}>
                     {feature.title}
                   </h3>
-                  <p className={`text-muted-400 leading-relaxed ${feature.large ? 'text-base' : 'text-sm'}`}>
+                  <p className={`text-gray-600 leading-relaxed ${feature.large ? 'text-base' : 'text-sm'}`}>
                     {feature.description}
                   </p>
 
@@ -138,12 +138,12 @@ export default function Features() {
                     <div className="mt-6 flex items-center gap-3">
                       <div className="flex -space-x-2">
                         {['bg-primary-500', 'bg-accent-500', 'bg-emerald-500'].map((bg, i) => (
-                          <div key={i} className={`w-8 h-8 rounded-full ${bg} border-2 border-dark-800 flex items-center justify-center text-white text-[10px] font-bold`}>
+                          <div key={i} className={`w-8 h-8 rounded-full ${bg} border-2 border-white flex items-center justify-center text-white text-[10px] font-bold`}>
                             {['AI', 'FR', 'ID'][i]}
                           </div>
                         ))}
                       </div>
-                      <span className="text-sm text-muted-400">Akurasi 99.9%</span>
+                      <span className="text-sm text-gray-600">99.9% Accuracy</span>
                     </div>
                   )}
                 </div>

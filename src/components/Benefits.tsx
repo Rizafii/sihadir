@@ -68,9 +68,9 @@ export default function Benefits() {
   const active = audiences.find((a) => a.id === activeTab)!;
 
   return (
-    <section id="manfaat" className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, #0d1117 0%, #0f0f1a 100%)' }}>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent" />
-      <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-primary-600/5 blur-[120px] pointer-events-none" />
+    <section id="manfaat" className="relative py-24 lg:py-32 overflow-hidden bg-gray-50">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-violet-200/50 to-transparent" />
+      <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-primary-100/30 blur-[120px] pointer-events-none" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Header */}
@@ -80,18 +80,18 @@ export default function Benefits() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-100/50 border border-violet-200 text-violet-700 text-sm font-medium mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Manfaat
+            BENEFITS
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Manfaat untuk{' '}
-            <span className="text-gradient">Semua Pihak</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Benefits for{' '}
+            <span className="text-primary-600">everyone</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Sihadir dirancang untuk memberikan manfaat nyata bagi seluruh stakeholder di lingkungan sekolah.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Sihadir is designed to deliver real benefits for all stakeholders in the school environment.
           </p>
         </motion.div>
 
@@ -106,9 +106,9 @@ export default function Benefits() {
             <button
               key={aud.id}
               onClick={() => setActiveTab(aud.id)}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 border ${activeTab === aud.id
+              className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 border ${activeTab === aud.id
                   ? `bg-gradient-to-r ${aud.color} text-white border-transparent shadow-lg`
-                  : 'bg-white/[0.03] text-muted-400 border-white/[0.06] hover:bg-white/[0.06] hover:text-white'
+                  : 'bg-gray-50 text-gray-600 border-gray-200 hover:bg-gray-100 hover:text-gray-900'
                 }`}
             >
               <aud.icon className="w-4 h-4" />
@@ -132,17 +132,17 @@ export default function Benefits() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="group p-5 rounded-2xl bg-dark-800/40 border border-white/[0.06] hover:border-white/[0.12] transition-all duration-400 hover:-translate-y-0.5"
+                className="group p-5 rounded-2xl bg-white/50 border border-gray-200/50 hover:border-gray-300 transition-all duration-400 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${active.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                  <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${active.color} flex items-center justify-center flex-shrink-0 shadow-md`}>
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold font-display text-white mb-1.5">{benefit.title}</h4>
-                    <p className="text-sm text-muted-400 leading-relaxed">{benefit.desc}</p>
+                    <h4 className="text-base font-bold font-display text-gray-900 mb-1.5">{benefit.title}</h4>
+                    <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
                   </div>
                 </div>
               </motion.div>

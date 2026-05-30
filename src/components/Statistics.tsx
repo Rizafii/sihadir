@@ -71,7 +71,7 @@ export default function Statistics() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, #0f0f1a 0%, #0a0a18 50%, #0f0f1a 100%)' }}>
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-gray-50">
       {/* Background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary-500/20 to-transparent" />
       <div className="absolute inset-0 pointer-events-none">
@@ -86,12 +86,12 @@ export default function Statistics() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Dipercaya oleh{' '}
-            <span className="text-gradient">Banyak Sekolah</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Trusted by{' '}
+            <span className="text-primary-600">thousands of schools</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Angka-angka yang menunjukkan dampak nyata Sihadir di dunia pendidikan Indonesia.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Numbers that demonstrate Sihadir's real impact on education.
           </p>
         </motion.div>
 
@@ -103,21 +103,21 @@ export default function Statistics() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 + index * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="group relative text-center p-6 lg:p-8 rounded-2xl bg-dark-800/40 border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500"
+              className="group relative text-center p-6 lg:p-8 rounded-2xl bg-white/50 border border-gray-200/50 hover:border-gray-300 transition-all duration-500 hover:shadow-lg hover:shadow-black/5"
             >
               {/* Icon */}
-              <div className={`w-14 h-14 mx-auto mb-5 rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-lg`}>
+              <div className={`w-14 h-14 mx-auto mb-5 rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-md`}>
                 <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={stat.iconPath} />
                 </svg>
               </div>
 
               {/* Counter */}
-              <div className="text-3xl lg:text-4xl font-extrabold font-display text-white mb-2">
+              <div className="text-3xl lg:text-4xl font-bold font-display text-gray-900 mb-2">
                 <Counter target={stat.value} suffix={stat.suffix} isInView={isInView} />
               </div>
-              <div className="text-sm font-semibold text-white/80 mb-1">{stat.label}</div>
-              <div className="text-xs text-muted-400">{stat.description}</div>
+              <div className="text-sm font-semibold text-gray-800 mb-1">{stat.label}</div>
+              <div className="text-xs text-gray-600">{stat.description}</div>
             </motion.div>
           ))}
         </div>

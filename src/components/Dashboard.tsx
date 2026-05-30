@@ -6,11 +6,11 @@ export default function Dashboard() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden" style={{ background: 'linear-gradient(180deg, #0d1117 0%, #0a0f18 50%, #0d1117 100%)' }}>
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-gray-50">
       {/* Background */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary-600/5 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full bg-accent-500/5 blur-[100px] pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary-500/15 to-transparent" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] rounded-full bg-accent-100/20 blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary-200/50 to-transparent" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Header */}
@@ -20,18 +20,18 @@ export default function Dashboard() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-500/10 border border-accent-500/20 text-accent-400 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-100/50 border border-accent-200 text-accent-700 text-sm font-medium mb-6">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            Preview Dashboard
+            CUSTOMIZABLE DASHBOARDS
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5 tracking-tight">
-            Dashboard yang{' '}
-            <span className="text-gradient">Powerful & Intuitif</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
+            Beautifully customizable{' '}
+            <span className="text-primary-600">dashboards</span>
           </h2>
-          <p className="text-lg text-muted-400 leading-relaxed">
-            Pantau kehadiran siswa secara realtime dengan tampilan dashboard modern yang mudah dipahami oleh guru dan admin sekolah.
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Monitor real-time data with a modern, intuitive dashboard designed for educators and administrators.
           </p>
         </motion.div>
 
@@ -43,27 +43,27 @@ export default function Dashboard() {
           className="relative max-w-5xl mx-auto"
         >
           {/* Glow */}
-          <div className="absolute -inset-6 bg-gradient-to-r from-primary-600/10 via-accent-500/10 to-primary-600/10 rounded-3xl blur-3xl" />
+          <div className="absolute -inset-6 bg-gradient-to-r from-primary-100/30 via-accent-100/30 to-primary-100/30 rounded-3xl blur-3xl" />
 
           {/* Main window */}
-          <div className="relative rounded-2xl border border-white/[0.08] bg-dark-800/60 backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/50">
+          <div className="relative rounded-2xl border border-gray-200 bg-white/90 backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/5">
             {/* Window chrome */}
-            <div className="flex items-center justify-between px-5 py-3 border-b border-white/5 bg-dark-900/50">
+            <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/50">
               <div className="flex items-center gap-3">
                 <div className="flex gap-1.5">
-                  <div className="w-3 h-3 rounded-full bg-red-400/70" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-400/70" />
+                  <div className="w-3 h-3 rounded-full bg-red-400" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-400" />
                 </div>
                 <div className="hidden sm:flex items-center gap-2">
-                  <div className="px-3 py-1 rounded-md bg-white/5 text-[11px] text-muted-400 font-mono">Dashboard</div>
-                  <div className="px-3 py-1 rounded-md text-[11px] text-muted-500 font-mono">Laporan</div>
-                  <div className="px-3 py-1 rounded-md text-[11px] text-muted-500 font-mono">Siswa</div>
+                  <div className="px-3 py-1 rounded-md bg-gray-100 text-[11px] text-gray-600 font-mono">Dashboard</div>
+                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Reports</div>
+                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Students</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-[11px] text-emerald-400">Live</span>
+                <span className="text-[11px] text-emerald-600">Live</span>
               </div>
             </div>
 
@@ -72,38 +72,38 @@ export default function Dashboard() {
               {/* Top stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
                 {[
-                  { label: 'Total Siswa', value: '1,247', change: '+23', changeColor: 'text-emerald-400', icon: '👥', bg: 'from-primary-500/10 to-primary-600/5' },
-                  { label: 'Hadir Hari Ini', value: '1,189', change: '95.3%', changeColor: 'text-emerald-400', icon: '✅', bg: 'from-emerald-500/10 to-emerald-600/5' },
-                  { label: 'Terlambat', value: '32', change: '-5', changeColor: 'text-emerald-400', icon: '⏰', bg: 'from-amber-500/10 to-amber-600/5' },
-                  { label: 'Izin / Sakit', value: '26', change: '2.1%', changeColor: 'text-muted-400', icon: '📋', bg: 'from-violet-500/10 to-violet-600/5' },
+                  { label: 'Total Students', value: '1,247', change: '+23', changeColor: 'text-emerald-600', icon: '👥', bg: 'from-primary-50 to-primary-100/50' },
+                  { label: 'Present Today', value: '1,189', change: '95.3%', changeColor: 'text-emerald-600', icon: '✅', bg: 'from-emerald-50 to-emerald-100/50' },
+                  { label: 'Late', value: '32', change: '-5', changeColor: 'text-emerald-600', icon: '⏰', bg: 'from-amber-50 to-amber-100/50' },
+                  { label: 'Leave / Sick', value: '26', change: '2.1%', changeColor: 'text-gray-600', icon: '📋', bg: 'from-violet-50 to-violet-100/50' },
                 ].map((stat) => (
-                  <div key={stat.label} className={`p-4 rounded-xl bg-gradient-to-br ${stat.bg} border border-white/5`}>
+                  <div key={stat.label} className={`p-4 rounded-xl bg-gradient-to-br ${stat.bg} border border-gray-200/50`}>
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-lg">{stat.icon}</span>
                       <span className={`text-[11px] font-medium ${stat.changeColor}`}>{stat.change}</span>
                     </div>
-                    <div className="text-2xl font-bold font-display text-white">{stat.value}</div>
-                    <div className="text-[11px] text-muted-400 mt-0.5">{stat.label}</div>
+                    <div className="text-2xl font-bold font-display text-gray-900">{stat.value}</div>
+                    <div className="text-[11px] text-gray-600 mt-0.5">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
               <div className="grid lg:grid-cols-3 gap-5">
                 {/* Chart area */}
-                <div className="lg:col-span-2 rounded-xl bg-white/[0.02] border border-white/5 p-5">
+                <div className="lg:col-span-2 rounded-xl bg-gray-100/50 border border-gray-200 p-5">
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <h4 className="text-sm font-semibold text-white">Tren Kehadiran</h4>
-                      <p className="text-[11px] text-muted-400 mt-0.5">30 hari terakhir</p>
+                      <h4 className="text-sm font-semibold text-gray-900">Attendance Trend</h4>
+                      <p className="text-[11px] text-gray-600 mt-0.5">Last 30 days</p>
                     </div>
                     <div className="flex items-center gap-4 text-[11px]">
                       <div className="flex items-center gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-primary-500" />
-                        <span className="text-muted-400">Hadir</span>
+                        <span className="text-gray-600">Present</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-                        <span className="text-muted-400">Terlambat</span>
+                        <span className="text-gray-600">Late</span>
                       </div>
                     </div>
                   </div>
