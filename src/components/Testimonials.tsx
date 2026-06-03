@@ -4,19 +4,19 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Dr. Haryanto, M.Pd.',
+    name: 'Dr. Dwi Titik Irdiyanti, S.Si., M.Pd.',
     role: 'Kepala Sekolah',
-    school: 'SMKN 1 Bandung',
-    avatar: 'H',
+    school: 'SMK Negeri 6 Surakarta',
+    avatar: 'D',
     rating: 5,
     text: 'Sihadir mengubah total cara kami mengelola absensi. Tidak ada lagi titip absen, data akurat, dan orang tua bisa memantau langsung. Sangat recommended!',
     gradient: 'from-primary-500/20 to-accent-500/20',
   },
   {
-    name: 'Ibu Sari Dewi, S.Pd.',
+    name: 'Pak Binar Aris Purwaka, S.Kom.',
     role: 'Wali Kelas XII RPL',
-    school: 'SMA Negeri 3 Jakarta',
-    avatar: 'S',
+    school: 'SMK Negeri 6 Surakarta',
+    avatar: 'B',
     rating: 5,
     text: 'Sebagai guru, saya tidak perlu lagi rekap manual. Dashboard-nya sangat intuitif dan laporan bisa di-export Excel kapan saja. Hemat waktu dan tenaga!',
     gradient: 'from-emerald-500/20 to-accent-500/20',
@@ -24,7 +24,7 @@ const testimonials = [
   {
     name: 'Pak Ahmad Fauzi',
     role: 'Orang Tua Siswa',
-    school: 'SMKN 2 Surabaya',
+    school: 'SMK Negeri 6 Surakarta',
     avatar: 'A',
     rating: 5,
     text: 'Sekarang saya langsung dapat notifikasi WhatsApp kalau anak sudah sampai sekolah. Sebagai orang tua yang bekerja, fitur ini sangat menenangkan.',

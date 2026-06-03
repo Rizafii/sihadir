@@ -55,7 +55,7 @@ export default function CTA() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <motion.a
-              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20Sihadir"
+              href="https://wa.me/6282133289048?text=Halo%2C%20saya%20tertarik%20dengan%20Sihadir"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02, y: -2 }}

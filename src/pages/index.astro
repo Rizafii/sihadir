@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
+import Navbar from '../components/Navbar.tsx';
 import Hero from '../components/Hero.tsx';
 import Problems from '../components/Problems.tsx';
 import Features from '../components/Features.tsx';
@@ -14,7 +14,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <Navbar />
+  <Navbar client:load />
 
   <main>
     <Hero client:load />
