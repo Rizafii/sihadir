@@ -59,14 +59,14 @@ export default function HowItWorks() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            HOW IT WORKS
+            CARA KERJA
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Simple as{' '}
+            Sesederhana{' '}
             <span className="text-primary-600">1, 2, 3</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            A streamlined process that takes just seconds — capture, verify, and record attendance instantly.
+            Proses yang terstruktur dan hanya membutuhkan beberapa detik — tangkap, verifikasi, dan catat kehadiran secara instan.
           </p>
         </motion.div>
 

@@ -39,17 +39,17 @@ export default function CTA() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-100/50 border border-primary-200 text-primary-700 text-sm font-medium mb-8"
           >
             <Sparkles className="w-4 h-4" />
-            Start free — No credit card required
+            Mulai gratis — Tanpa perlu kartu kredit
           </motion.div>
 
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-[1.1]">
-            Ready to transform{' '}
-            <span className="text-primary-600">your attendance</span>{' '}
-            system?
+            Siap merevolusi{' '}
+            <span className="text-primary-600">sistem absensi</span>{' '}
+            sekolah Anda?
           </h2>
 
           <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-            Join dozens of schools that have switched to digital attendance. Set up in 5 minutes, start using immediately.
+            Bergabunglah dengan puluhan sekolah yang telah beralih ke sistem absensi digital. Setup hanya 5 menit, langsung bisa digunakan.
           </p>
 
           {/* CTA Buttons */}
@@ -62,7 +62,7 @@ export default function CTA() {
               whileTap={{ scale: 0.98 }}
               className="group inline-flex items-center gap-3 px-8 py-4 text-base font-semibold text-white rounded-lg bg-primary-600 hover:bg-primary-700 shadow-lg hover:shadow-xl transition-all duration-400"
             >
-              Contact us via WhatsApp
+              Hubungi Kami via WhatsApp
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.a>
             <a
@@ -72,7 +72,7 @@ export default function CTA() {
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Send Email
+              Kirim Email
             </a>
           </div>
 
@@ -87,19 +87,19 @@ export default function CTA() {
               <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Free 30-day trial</span>
+              <span>Uji coba gratis 30 hari</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Easy setup</span>
+              <span>Setup mudah dan cepat</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span>Support Penuh</span>
+              <span>Dukungan penuh</span>
             </div>
           </motion.div>
         </motion.div>

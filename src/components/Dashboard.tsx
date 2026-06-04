@@ -24,14 +24,14 @@ export default function Dashboard() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            CUSTOMIZABLE DASHBOARDS
+            DASHBOARD YANG DAPAT DIKUSTOMISASI
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Beautifully customizable{' '}
-            <span className="text-primary-600">dashboards</span>
+            Dashboard yang indah dan{' '}
+            <span className="text-primary-600">dapat dikustomisasi</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Monitor real-time data with a modern, intuitive dashboard designed for educators and administrators.
+            Pantau data realtime dengan dashboard modern dan intuitif yang dirancang untuk guru dan administrator.
           </p>
         </motion.div>
 
@@ -57,13 +57,13 @@ export default function Dashboard() {
                 </div>
                 <div className="hidden sm:flex items-center gap-2">
                   <div className="px-3 py-1 rounded-md bg-gray-100 text-[11px] text-gray-600 font-mono">Dashboard</div>
-                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Reports</div>
-                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Students</div>
+                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Laporan</div>
+                  <div className="px-3 py-1 rounded-md text-[11px] text-gray-500 font-mono">Siswa</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-[11px] text-emerald-600">Live</span>
+                <span className="text-[11px] text-emerald-600">Aktif</span>
               </div>
             </div>
 
@@ -72,10 +72,10 @@ export default function Dashboard() {
               {/* Top stats */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
                 {[
-                  { label: 'Total Students', value: '1,247', change: '+23', changeColor: 'text-emerald-600', icon: '👥', bg: 'from-primary-50 to-primary-100/50' },
-                  { label: 'Present Today', value: '1,189', change: '95.3%', changeColor: 'text-emerald-600', icon: '✅', bg: 'from-emerald-50 to-emerald-100/50' },
-                  { label: 'Late', value: '32', change: '-5', changeColor: 'text-emerald-600', icon: '⏰', bg: 'from-amber-50 to-amber-100/50' },
-                  { label: 'Leave / Sick', value: '26', change: '2.1%', changeColor: 'text-gray-600', icon: '📋', bg: 'from-violet-50 to-violet-100/50' },
+                  { label: 'Total Siswa', value: '1,247', change: '+23', changeColor: 'text-emerald-600', icon: '👥', bg: 'from-primary-50 to-primary-100/50' },
+                  { label: 'Hadir Hari Ini', value: '1,189', change: '95.3%', changeColor: 'text-emerald-600', icon: '✅', bg: 'from-emerald-50 to-emerald-100/50' },
+                  { label: 'Terlambat', value: '32', change: '-5', changeColor: 'text-emerald-600', icon: '⏰', bg: 'from-amber-50 to-amber-100/50' },
+                  { label: 'Izin / Sakit', value: '26', change: '2.1%', changeColor: 'text-gray-600', icon: '📋', bg: 'from-violet-50 to-violet-100/50' },
                 ].map((stat) => (
                   <div key={stat.label} className={`p-4 rounded-xl bg-gradient-to-br ${stat.bg} border border-gray-200/50`}>
                     <div className="flex items-center justify-between mb-2">
@@ -93,17 +93,17 @@ export default function Dashboard() {
                 <div className="lg:col-span-2 rounded-xl bg-gray-100/50 border border-gray-200 p-5">
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900">Attendance Trend</h4>
-                      <p className="text-[11px] text-gray-600 mt-0.5">Last 30 days</p>
+                      <h4 className="text-sm font-semibold text-gray-900">Tren Kehadiran</h4>
+                      <p className="text-[11px] text-gray-600 mt-0.5">30 hari terakhir</p>
                     </div>
                     <div className="flex items-center gap-4 text-[11px]">
                       <div className="flex items-center gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-primary-500" />
-                        <span className="text-gray-600">Present</span>
+                        <span className="text-gray-600">Hadir</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <div className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-                        <span className="text-gray-600">Late</span>
+                        <span className="text-gray-600">Terlambat</span>
                       </div>
                     </div>
                   </div>

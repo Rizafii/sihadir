@@ -5,7 +5,7 @@ import { ScanFace, MapPinCheck, MessageSquare, LayoutDashboard, FileCheck, FileD
 const features = [
   {
     icon: ScanFace,
-    title: 'Face Recognition AI',
+    title: 'Pengenalan Wajah AI',
     description: 'Absensi menggunakan pengenalan wajah berbasis AI. Cukup arahkan kamera, wajah terverifikasi dalam hitungan detik.',
     span: 'lg:col-span-2 lg:row-span-2',
     gradient: 'from-primary-600/20 via-primary-500/5 to-transparent',
@@ -23,7 +23,7 @@ const features = [
   },
   {
     icon: MessageSquare,
-    title: 'WhatsApp Notification',
+    title: 'Notifikasi WhatsApp',
     description: 'Notifikasi otomatis ke orang tua & guru via WhatsApp saat siswa absen, terlambat, atau izin.',
     span: 'lg:col-span-1',
     gradient: 'from-emerald-500/15 via-emerald-500/5 to-transparent',
@@ -32,7 +32,7 @@ const features = [
   },
   {
     icon: LayoutDashboard,
-    title: 'Realtime Dashboard',
+    title: 'Dashboard Realtime',
     description: 'Pantau kehadiran seluruh siswa secara realtime dari dashboard admin yang modern dan informatif.',
     span: 'lg:col-span-1',
     gradient: 'from-violet-500/15 via-violet-500/5 to-transparent',
@@ -96,14 +96,14 @@ export default function Features() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
             </svg>
-            FEATURES
+            FITUR
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Everything you need to{' '}
-            <span className="text-primary-600">succeed</span>
+            Semua yang Anda butuhkan{' '}
+            <span className="text-primary-600">untuk sukses</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Maximize success with our flexible product features. Customize, stay compatible across platforms, and receive reliable support for optimized performance.
+            Tingkatkan efektivitas sekolah dengan fitur lengkap yang fleksibel dan mudah digunakan di semua perangkat. Dukungan teknis siap membantu.
           </p>
         </motion.div>
 

@@ -84,14 +84,14 @@ export default function Benefits() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            BENEFITS
+            MANFAAT
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Benefits for{' '}
-            <span className="text-primary-600">everyone</span>
+            Manfaat untuk{' '}
+            <span className="text-primary-600">semua orang</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Sihadir is designed to deliver real benefits for all stakeholders in the school environment.
+            Sihadir dirancang untuk memberikan manfaat nyata bagi semua pemangku kepentingan di lingkungan sekolah.
           </p>
         </motion.div>
 

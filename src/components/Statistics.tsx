@@ -87,11 +87,11 @@ export default function Statistics() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Trusted by{' '}
-            <span className="text-primary-600">thousands of schools</span>
+            Dipercaya oleh{' '}
+            <span className="text-primary-600">ribuan sekolah</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Numbers that demonstrate Sihadir's real impact on education.
+            Angka-angka yang menunjukkan dampak nyata Sihadir dalam dunia pendidikan.
           </p>
         </motion.div>
 

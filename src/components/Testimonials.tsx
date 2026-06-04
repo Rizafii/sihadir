@@ -51,14 +51,14 @@ export default function Testimonials() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100/50 border border-amber-200 text-amber-700 text-sm font-medium mb-6">
             <Star className="w-4 h-4 fill-amber-500" />
-            TESTIMONIALS
+            TESTIMONI
           </div>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            What our{' '}
-            <span className="text-primary-600">users say</span>
+            Apa kata{' '}
+            <span className="text-primary-600">pengguna kami</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Feedback from schools and parents who've experienced Sihadir's benefits.
+            Masukan dari sekolah dan orang tua yang telah merasakan manfaat Sihadir.
           </p>
         </motion.div>
 
