@@ -6,122 +6,132 @@ const steps = [
   {
     icon: Camera,
     number: '01',
-    title: 'Scan Wajah',
-    description: 'Siswa membuka kamera perangkat dan sistem mendeteksi wajah secara otomatis menggunakan AI.',
-    color: 'from-primary-500 to-primary-600',
-    glowColor: 'shadow-primary-500/20',
+    title: 'Scan Wajah AI',
+    description: 'Buka kamera dari perangkat Anda. Sistem akan langsung mendeteksi dan memverifikasi wajah secara otomatis dalam hitungan detik.',
+    iconBg: 'bg-blue-50',
+    iconColor: 'text-blue-600',
+    borderColor: 'border-blue-100',
   },
   {
     icon: MapPin,
     number: '02',
-    title: 'Validasi GPS',
-    description: 'Sistem memverifikasi lokasi siswa berada dalam radius sekolah menggunakan GPS geo-fencing.',
-    color: 'from-accent-400 to-accent-600',
-    glowColor: 'shadow-accent-500/20',
+    title: 'Validasi Lokasi',
+    description: 'Sistem memastikan posisi Anda berada tepat di dalam radius sekolah yang diizinkan menggunakan teknologi GPS Geo-fencing.',
+    iconBg: 'bg-emerald-50',
+    iconColor: 'text-emerald-600',
+    borderColor: 'border-emerald-100',
   },
   {
     icon: CheckCircle2,
     number: '03',
-    title: 'Absensi Berhasil',
-    description: 'Setelah wajah dan lokasi terverifikasi, kehadiran siswa tercatat otomatis di sistem.',
-    color: 'from-emerald-400 to-emerald-600',
-    glowColor: 'shadow-emerald-500/20',
+    title: 'Kehadiran Tercatat',
+    description: 'Data kehadiran langsung masuk ke sistem secara realtime, lengkap dengan bukti foto, waktu yang akurat, dan koordinat lokasi.',
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    borderColor: 'border-amber-100',
   },
   {
     icon: Bell,
     number: '04',
-    title: 'Notifikasi Terkirim',
-    description: 'Orang tua menerima notifikasi WhatsApp otomatis bahwa anak mereka sudah absen di sekolah.',
-    color: 'from-violet-400 to-violet-600',
-    glowColor: 'shadow-violet-500/20',
+    title: 'Notifikasi Otomatis',
+    description: 'Laporan kehadiran langsung dikirimkan ke WhatsApp orang tua sebagai bentuk transparansi dan keamanan.',
+    iconBg: 'bg-violet-50',
+    iconColor: 'text-violet-600',
+    borderColor: 'border-violet-100',
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
+
 export default function HowItWorks() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="cara-kerja" className="relative py-24 lg:py-32 overflow-hidden bg-white">
-      {/* Background elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-emerald-200/50 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary-100/20 blur-[150px] pointer-events-none" />
-
+    <section id="cara-kerja" className="relative py-16 lg:py-20 bg-gray-50/30 border-y border-gray-100">
       <div className="container-custom mx-auto px-6" ref={ref}>
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-2xl mx-auto mb-16 lg:mb-24"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-6">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            CARA KERJA
+        
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          
+          {/* Left Column: Sticky Header */}
+          <div className="lg:w-5/12">
+            <motion.div 
+              className="sticky top-24"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+              <div className="inline-flex items-center px-3 py-1.5 rounded-full border border-emerald-200 bg-emerald-50 mb-6">
+                <span className="text-emerald-600 text-[11px] font-bold uppercase tracking-wider">
+                  Cara Kerja
+                </span>
+              </div>
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-gray-900 mb-5 leading-tight tracking-tight">
+                Absensi mudah, <br className="hidden lg:block" />
+                hanya dalam detik.
+              </h2>
+              <p className="text-gray-600 text-[15px] leading-relaxed mb-8 max-w-md">
+                Kami merancang sistem ini agar siapa saja bisa menggunakannya tanpa bingung. Proses yang tadinya manual dan lama, kini bisa diselesaikan dengan 4 langkah otomatis.
+              </p>
+              
+              <div className="hidden lg:flex items-center gap-4 text-sm font-medium text-gray-900">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                </div>
+                <span>100% Otomatis & Terintegrasi</span>
+              </div>
+            </motion.div>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Sesederhana{' '}
-            <span className="text-primary-600">1, 2, 3</span>
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Proses yang terstruktur dan hanya membutuhkan beberapa detik — tangkap, verifikasi, dan catat kehadiran secara instan.
-          </p>
-        </motion.div>
 
-        {/* Timeline */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Connecting line — desktop */}
-          <div className="hidden lg:block absolute top-[60px] left-0 right-0 h-[2px]">
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={isInView ? { scaleX: 1 } : {}}
-              transition={{ delay: 0.3, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-              className="h-full bg-gradient-to-r from-primary-300/60 via-accent-300/60 to-emerald-300/60 origin-left"
-            />
-          </div>
-
-          <div className="grid lg:grid-cols-4 gap-8 lg:gap-6">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, y: 40 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ delay: 0.2 + index * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="relative"
-              >
-                {/* Mobile connecting line */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden absolute top-[76px] left-[30px] w-[2px] h-[calc(100%+32px)] bg-gradient-to-b from-white/10 to-transparent" />
-                )}
-
-                <div className="flex lg:flex-col items-start lg:items-center gap-5 lg:gap-0">
-                  {/* Step circle */}
-                  <div className="relative flex-shrink-0">
-                    <div className={`w-[60px] h-[60px] rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg ${step.glowColor} z-10 relative`}>
-                      <step.icon className="w-7 h-7 text-white" />
+          {/* Right Column: Grid Layout for Steps */}
+          <div className="lg:w-7/12">
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              animate={isInView ? 'visible' : 'hidden'}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5"
+            >
+              {steps.map((step) => (
+                <motion.div 
+                  key={step.number} 
+                  variants={itemVariants}
+                  className="bg-white p-5 lg:p-6 rounded-[1rem] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-gray-200 transition-all duration-300 flex flex-col h-full"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    {/* Icon */}
+                    <div className={`w-11 h-11 lg:w-12 lg:h-12 rounded-full ${step.iconBg} border ${step.borderColor} flex items-center justify-center`}>
+                      <step.icon className={`w-[18px] h-[18px] lg:w-5 lg:h-5 ${step.iconColor}`} />
                     </div>
-                    {/* Number badge */}
-                    <div className="absolute -top-2 -right-2 w-7 h-7 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[10px] font-bold text-gray-900 font-display z-20">
-                      {step.number}
-                    </div>
+                    {/* Number Indicator */}
+                    <span className="text-[10px] font-bold text-gray-400 font-display bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
+                      LANGKAH {step.number}
+                    </span>
                   </div>
 
                   {/* Content */}
-                  <div className="lg:text-center lg:mt-6">
-                    <h3 className="text-lg font-bold font-display text-gray-900 mb-2">
+                  <div className="flex-1 pt-1">
+                    <h3 className="font-display font-bold text-gray-900 text-[15px] lg:text-base mb-1.5">
                       {step.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed max-w-xs">
+                    <p className="text-[13px] text-gray-600 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
+
         </div>
+
       </div>
     </section>
   );

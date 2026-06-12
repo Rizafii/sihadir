@@ -1,117 +1,95 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { UserX, FileSpreadsheet, EyeOff, WifiOff } from 'lucide-react';
+import { UserX, FileSpreadsheet, BellOff } from 'lucide-react';
 
 const problems = [
   {
     icon: UserX,
     title: 'Titip Absen',
     description: 'Siswa mudah menitipkan absen ke teman karena tidak ada verifikasi identitas yang kuat.',
-    color: 'from-red-500 to-rose-600',
-    iconBg: 'bg-red-500/10',
-    iconColor: 'text-red-400',
+    color: 'text-red-600',
+    bgLight: 'bg-red-50',
+    borderColor: 'border-red-100',
+    align: 'self-start',
   },
   {
     icon: FileSpreadsheet,
     title: 'Rekap Manual',
     description: 'Guru menghabiskan waktu berjam-jam untuk merekap absensi secara manual setiap bulan.',
-    color: 'from-amber-500 to-orange-600',
-    iconBg: 'bg-amber-500/10',
-    iconColor: 'text-amber-400',
+    color: 'text-amber-600',
+    bgLight: 'bg-amber-50',
+    borderColor: 'border-amber-100',
+    align: 'self-end',
   },
   {
-    icon: EyeOff,
-    title: 'Sulit Monitoring',
-    description: 'Pihak sekolah kesulitan memantau kehadiran siswa secara realtime dan akurat.',
-    color: 'from-violet-500 to-purple-600',
-    iconBg: 'bg-violet-500/10',
-    iconColor: 'text-violet-400',
-  },
-  {
-    icon: WifiOff,
+    icon: BellOff,
     title: 'Orang Tua Tidak Tahu',
     description: 'Orang tua tidak mendapat informasi kehadiran anak di sekolah secara realtime.',
-    color: 'from-blue-500 to-indigo-600',
-    iconBg: 'bg-blue-500/10',
-    iconColor: 'text-blue-400',
+    color: 'text-orange-600',
+    bgLight: 'bg-orange-50',
+    borderColor: 'border-orange-100',
+    align: 'self-center',
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
-  },
-};
-
 export default function Problems() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-gray-50">
-      {/* Subtle top border glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-primary-200/50 to-transparent" />
+    <section className="relative py-16 lg:py-20 overflow-hidden bg-white" id="masalah">
+      {/* Decorative Blob */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-red-50/50 rounded-full blur-3xl -z-10 opacity-70 pointer-events-none" />
 
       <div className="container-custom mx-auto px-6" ref={ref}>
-        {/* Section header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center max-w-2xl mx-auto mb-16 lg:mb-20"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-100/50 border border-red-200 text-red-700 text-sm font-medium mb-6">
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
-            </svg>
-            MASALAH
-          </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5 tracking-tight">
-            Masalah nyata yang kami{' '}
-            <span className="text-primary-600">selesaikan</span>
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Sistem absensi modern mengatasi tantangan kritis yang berdampak pada operasional sekolah dan kemampuan monitoring waktu nyata.
-          </p>
-        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+          
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="flex flex-col items-start max-w-lg lg:ml-8"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full border border-red-200 bg-red-50 mb-6">
+              <span className="text-red-600 text-xs font-bold uppercase tracking-wider">
+                Masalah
+              </span>
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+              Masalah nyata yang kami selesaikan
+            </h2>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Sistem absensi modern mengatasi tantangan kritis yang berdampak pada operasional sekolah dan kemampuan monitoring waktu nyata.
+            </p>
+          </motion.div>
 
-        {/* Problem cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"
-        >
-          {problems.map((problem) => (
-            <motion.div key={problem.title} variants={cardVariants}>
-              <div className="group relative h-full p-6 rounded-2xl bg-white border border-gray-200 hover:border-gray-300 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5">
-                {/* Hover glow */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${problem.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
-
-                <div className="relative z-10">
-                  <div className={`w-12 h-12 rounded-xl ${problem.iconBg} flex items-center justify-center mb-5`}>
-                    <problem.icon className={`w-6 h-6 ${problem.iconColor}`} />
-                  </div>
-                  <h3 className="text-lg font-bold font-display text-gray-900 mb-2.5">{problem.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{problem.description}</p>
+          {/* Right Content - Staggered Cards */}
+          <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 flex flex-col gap-5 py-4">
+            {problems.map((problem, index) => (
+              <motion.div
+                key={problem.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
+                className={`w-full sm:w-[85%] relative bg-white p-5 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 flex gap-4 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gray-200/60 ${problem.align}`}
+              >
+                <div className={`w-12 h-12 rounded-xl ${problem.bgLight} border ${problem.borderColor} flex items-center justify-center flex-shrink-0`}>
+                  <problem.icon className={`w-6 h-6 ${problem.color}`} strokeWidth={1.5} />
                 </div>
+                <div className="flex flex-col justify-center gap-1">
+                  <h3 className="text-base font-bold text-gray-900 font-display">
+                    {problem.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {problem.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-                {/* Bottom accent line */}
-                <div className={`absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r ${problem.color} opacity-0 group-hover:opacity-40 transition-opacity duration-500`} />
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
