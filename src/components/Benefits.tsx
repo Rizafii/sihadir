@@ -80,9 +80,8 @@ export default function Benefits() {
   const active = audiences.find((a) => a.id === activeTab)!;
 
   return (
-    <section id="manfaat" className="relative py-12 lg:py-20 overflow-hidden bg-gray-50/50">
-      <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-blue-100/30 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-blue-50/50 blur-[100px] pointer-events-none" />
+    <section id="manfaat" className="relative py-12 lg:py-20 overflow-hidden bg-white">
+      {/* Background Blobs Removed */}
 
       <div className="container-custom mx-auto px-6 relative z-10" ref={ref}>
         {/* Header */}
@@ -97,11 +96,10 @@ export default function Benefits() {
               MANFAAT
             </span>
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-gray-900 mb-4 leading-[1.1] tracking-tight">
-            Memberikan nilai lebih untuk{' '}
-            <span className="text-blue-600">semua pihak</span>
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-slate-800 mb-4 leading-[1.1] tracking-tight">
+            Memberikan nilai lebih untuk <span className="text-blue-500">semua pihak</span>
           </h2>
-          <p className="text-[14px] lg:text-[16px] text-gray-600 leading-relaxed max-w-xl mx-auto">
+          <p className="text-[14px] lg:text-[15px] text-slate-500 leading-relaxed max-w-xl mx-auto">
             Sihadir tidak hanya mempermudah absensi, tetapi juga membangun ekosistem digital yang efisien dan transparan di sekolah.
           </p>
         </motion.div>
@@ -125,20 +123,20 @@ export default function Benefits() {
                     onClick={() => setActiveTab(aud.id)}
                     className={`flex items-center gap-3 px-4 py-3 lg:px-5 lg:py-4 rounded-[1rem] text-left transition-all duration-300 whitespace-nowrap lg:whitespace-normal border ${
                       isActive
-                        ? `${aud.activeBg} ${aud.activeText} shadow-md border-transparent`
-                        : `bg-white text-gray-600 border-gray-100 hover:border-gray-200 hover:shadow-sm hover:bg-gray-50`
+                        ? `${aud.bg} ${aud.color} border-transparent shadow-sm`
+                        : 'bg-white text-slate-500 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
                     }`}
                   >
                     <div className={`p-2 rounded-lg flex-shrink-0 transition-colors ${
-                      isActive ? 'bg-white/20' : aud.bg
+                      isActive ? 'bg-white/60' : aud.bg
                     }`}>
-                      <aud.icon className={`w-5 h-5 ${isActive ? 'text-white' : aud.color}`} />
+                      <aud.icon className={`w-5 h-5 ${aud.color}`} />
                     </div>
                     <div>
-                      <div className={`font-bold font-display text-[14px] lg:text-[15px] ${isActive ? 'text-white' : 'text-gray-900'}`}>
+                      <div className={`font-bold font-display text-[14px] lg:text-[15px] ${isActive ? aud.color : 'text-slate-700'}`}>
                         {aud.title}
                       </div>
-                      <div className={`text-[11px] lg:text-[12px] font-medium hidden lg:block ${isActive ? 'text-white/80' : 'text-gray-500'}`}>
+                      <div className={`text-[11px] lg:text-[12px] font-medium hidden lg:block ${isActive ? aud.color : 'text-slate-400'} opacity-80`}>
                         {aud.subtitle}
                       </div>
                     </div>
@@ -164,15 +162,15 @@ export default function Benefits() {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1, duration: 0.4 }}
-                      className="group p-5 lg:p-6 rounded-[1.25rem] bg-white border border-gray-100 shadow-[0_2px_10px_rgb(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-gray-200 transition-all duration-300"
+                      className="group relative bg-white p-6 lg:p-8 rounded-[1.25rem] border border-slate-100 shadow-[0_2px_10px_rgb(0,0,0,0.02)] hover:shadow-sm hover:border-slate-200 transition-all duration-300"
                     >
                       <div className="flex items-start gap-3.5">
                         <CheckCircle2 className={`w-5 h-5 lg:w-6 lg:h-6 flex-shrink-0 ${active.color}`} />
                         <div>
-                          <h4 className="text-[14px] lg:text-[15px] font-bold font-display text-gray-900 mb-1.5 group-hover:text-blue-600 transition-colors">
+                          <h3 className="font-display font-bold text-slate-800 text-[16px] lg:text-[18px] mb-2 leading-tight">
                             {benefit.title}
-                          </h4>
-                          <p className="text-[13px] text-gray-600 leading-relaxed">
+                          </h3>
+                          <p className="text-[14px] text-slate-500 leading-relaxed flex-1">
                             {benefit.desc}
                           </p>
                         </div>

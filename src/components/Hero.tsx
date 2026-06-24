@@ -28,11 +28,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white"
       style={{ paddingTop: '130px', paddingBottom: '40px' }}
     >
-      {/* Subtle background blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/3 w-72 h-72 rounded-full bg-emerald-50/30 blur-3xl opacity-40" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-blue-50/20 blur-3xl opacity-30" />
-      </div>
+      {/* Background blobs removed for clean UI */}
 
       {/* Floating Badge - Left: "Akurat & Valid" */}
       <motion.div
@@ -43,14 +39,10 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8, x: -20 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg"
-          style={{ background: '#e6f9f1' }}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white shadow-sm"
         >
-          <span
-            className="w-2.5 h-2.5 rounded-full flex-shrink-0"
-            style={{ background: '#00C48C' }}
-          />
-          <span className="text-xs md:text-sm font-semibold whitespace-nowrap" style={{ color: '#0d7a56' }}>
+          <span className="w-2.5 h-2.5 rounded-full flex-shrink-0 bg-emerald-400" />
+          <span className="text-xs md:text-sm font-medium text-slate-600">
             Akurat &amp; Valid
           </span>
         </motion.div>
@@ -65,10 +57,12 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8, x: 20 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg text-white text-xs md:text-sm font-semibold whitespace-nowrap"
-          style={{ background: '#00C48C' }}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-200 bg-white shadow-sm"
         >
-          Cepat &amp; Praktis
+          <span className="w-2.5 h-2.5 rounded-full flex-shrink-0 bg-blue-400" />
+          <span className="text-xs md:text-sm font-medium text-slate-600">
+            Cepat &amp; Praktis
+          </span>
         </motion.div>
       </motion.div>
 
@@ -83,17 +77,9 @@ export default function Hero() {
           className="mb-4 md:mb-6"
         >
           <div
-            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border text-xs md:text-sm font-medium"
-            style={{
-              background: '#ffffff',
-              borderColor: '#e5e7eb',
-              color: '#4b5563',
-            }}
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-slate-200 bg-slate-50 text-xs md:text-sm font-medium text-slate-600 shadow-sm"
           >
-            <span
-              className="w-2 h-2 rounded-full flex-shrink-0 animate-pulse"
-              style={{ background: '#00C48C' }}
-            />
+            <span className="w-2 h-2 rounded-full flex-shrink-0 bg-emerald-500 animate-pulse" />
             Teknologi AI terdepan untuk Sekolah Modern
           </div>
         </motion.div>
@@ -104,7 +90,7 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="font-bold leading-tight tracking-tight text-gray-900 mb-4 md:mb-5"
+          className="font-bold leading-tight tracking-tight text-slate-800 mb-4 md:mb-5"
           style={{
             fontSize: 'clamp(1.875rem, 4vw, 2.75rem)',
             fontFamily: "'Inter', system-ui, sans-serif",
@@ -137,10 +123,8 @@ export default function Hero() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="leading-relaxed mb-6 md:mb-8"
+          className="leading-relaxed mb-6 md:mb-8 text-slate-500 text-[14px]"
           style={{
-            fontSize: '14px',
-            color: '#6b7280',
             maxWidth: '450px',
             fontFamily: "'Inter', system-ui, sans-serif",
           }}
@@ -158,38 +142,20 @@ export default function Hero() {
         >
           <a
             href="#kontak"
-            className="inline-flex items-center justify-center font-semibold text-white rounded-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            className="inline-flex items-center justify-center font-medium text-white rounded-xl transition-all duration-300 bg-blue-600 hover:bg-blue-700 hover:shadow-sm"
             style={{
-              background: '#2196F3',
               padding: '12px 24px',
               fontSize: '14px',
-              borderRadius: '6px',
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = '#1976D2';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.background = '#2196F3';
             }}
           >
             Mulai Sekarang
           </a>
           <a
             href="#hubungi"
-            className="inline-flex items-center justify-center font-semibold rounded-md transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center font-medium rounded-xl transition-all duration-300 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 shadow-sm"
             style={{
-              background: '#ffffff',
-              border: '1px solid #d1d5db',
-              color: '#374151',
               padding: '12px 24px',
               fontSize: '14px',
-              borderRadius: '6px',
-            }}
-            onMouseEnter={(e) => {
-              (e.target as HTMLElement).style.background = '#f9fafb';
-            }}
-            onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.background = '#ffffff';
             }}
           >
             Hubungi kami

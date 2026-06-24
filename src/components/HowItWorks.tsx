@@ -56,7 +56,7 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="cara-kerja" className="relative py-16 lg:py-20 bg-gray-50/30 border-y border-gray-100">
+    <section id="cara-kerja" className="relative py-16 lg:py-20 bg-white border-y border-slate-100">
       <div className="container-custom mx-auto px-6" ref={ref}>
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
@@ -74,16 +74,16 @@ export default function HowItWorks() {
                   Cara Kerja
                 </span>
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-gray-900 mb-5 leading-tight tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-slate-800 mb-5 leading-tight tracking-tight">
                 Absensi mudah, <br className="hidden lg:block" />
                 hanya dalam detik.
               </h2>
-              <p className="text-gray-600 text-[15px] leading-relaxed mb-8 max-w-md">
+              <p className="text-slate-500 text-[15px] leading-relaxed mb-8 max-w-md">
                 Kami merancang sistem ini agar siapa saja bisa menggunakannya tanpa bingung. Proses yang tadinya manual dan lama, kini bisa diselesaikan dengan 4 langkah otomatis.
               </p>
               
-              <div className="hidden lg:flex items-center gap-4 text-sm font-medium text-gray-900">
-                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center">
+              <div className="hidden lg:flex items-center gap-4 text-sm font-medium text-slate-800">
+                <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-100 flex items-center justify-center">
                   <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                 </div>
                 <span>100% Otomatis & Terintegrasi</span>
@@ -103,7 +103,7 @@ export default function HowItWorks() {
                 <motion.div 
                   key={step.number} 
                   variants={itemVariants}
-                  className="bg-white p-5 lg:p-6 rounded-[1rem] border border-gray-100 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:border-gray-200 transition-all duration-300 flex flex-col h-full"
+                  className="bg-white p-5 lg:p-6 rounded-[1rem] border border-slate-100 shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-sm hover:border-slate-200 transition-all duration-300 flex flex-col h-full"
                 >
                   <div className="flex items-center justify-between mb-4">
                     {/* Icon */}
@@ -111,17 +111,17 @@ export default function HowItWorks() {
                       <step.icon className={`w-[18px] h-[18px] lg:w-5 lg:h-5 ${step.iconColor}`} />
                     </div>
                     {/* Number Indicator */}
-                    <span className="text-[10px] font-bold text-gray-400 font-display bg-gray-50 px-2.5 py-1 rounded-md border border-gray-100">
+                    <span className="text-[10px] font-bold text-slate-400 font-display bg-slate-50 px-2.5 py-1 rounded-md border border-slate-100">
                       LANGKAH {step.number}
                     </span>
                   </div>
 
                   {/* Content */}
                   <div className="flex-1 pt-1">
-                    <h3 className="font-display font-bold text-gray-900 text-[15px] lg:text-base mb-1.5">
+                    <h3 className="font-display font-bold text-slate-800 text-[15px] lg:text-base mb-1.5">
                       {step.title}
                     </h3>
-                    <p className="text-[13px] text-gray-600 leading-relaxed">
+                    <p className="text-[13px] text-slate-500 leading-relaxed">
                       {step.description}
                     </p>
                   </div>

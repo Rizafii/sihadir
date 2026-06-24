@@ -66,7 +66,7 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <section id="fitur" className="relative py-12 lg:py-16 bg-gray-50/50">
+    <section id="fitur" className="relative py-12 lg:py-16 bg-white">
       <div className="container-custom mx-auto px-6" ref={ref}>
         {/* Section header */}
         <motion.div
@@ -80,10 +80,10 @@ export default function Features() {
               Fitur
             </span>
           </div>
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2rem] font-bold text-gray-900 mb-3 leading-tight tracking-tight">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2rem] font-bold text-slate-800 mb-3 leading-tight tracking-tight">
             Semua yang Anda butuhkan
           </h2>
-          <p className="text-[13px] lg:text-[15px] text-gray-600 leading-relaxed">
+          <p className="text-[13px] lg:text-[15px] text-slate-500 leading-relaxed">
             Tingkatkan efektivitas sekolah dengan fitur lengkap yang fleksibel dan mudah digunakan di semua perangkat.
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ export default function Features() {
         >
           {features.map((feature) => (
             <motion.div key={feature.title} variants={cardVariants} className="h-full">
-              <div className="relative h-full p-4 lg:p-5 rounded-[1rem] bg-white border border-gray-100 shadow-[0_2px_8px_rgb(0,0,0,0.02)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgb(0,0,0,0.06)] hover:border-gray-200 flex flex-col sm:flex-row items-start gap-4">
+              <div className="relative h-full p-4 lg:p-5 rounded-[1rem] bg-white border border-slate-100 shadow-[0_2px_8px_rgb(0,0,0,0.02)] transition-all duration-300 hover:shadow-sm hover:border-slate-200 flex flex-col sm:flex-row items-start gap-4">
 
                 {/* Icon */}
                 <div className={`w-11 h-11 lg:w-12 lg:h-12 rounded-xl ${feature.iconBg} flex items-center justify-center flex-shrink-0`}>
@@ -105,10 +105,10 @@ export default function Features() {
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <h3 className="font-display font-bold text-gray-900 text-[15px] lg:text-base">
+                  <h3 className="font-display font-bold text-slate-800 text-[15px] lg:text-base">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-[13px]">
+                  <p className="text-slate-500 leading-relaxed text-[13px]">
                     {feature.description}
                   </p>
                 </div>

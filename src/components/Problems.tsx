@@ -38,8 +38,7 @@ export default function Problems() {
 
   return (
     <section className="relative py-16 lg:py-20 overflow-hidden bg-white" id="masalah">
-      {/* Decorative Blob */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-red-50/50 rounded-full blur-3xl -z-10 opacity-70 pointer-events-none" />
+      {/* Decorative Blob Removed */}
 
       <div className="container-custom mx-auto px-6" ref={ref}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
@@ -56,10 +55,10 @@ export default function Problems() {
                 Masalah
               </span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-slate-800 mb-6 leading-tight tracking-tight">
               Masalah nyata yang kami selesaikan
             </h2>
-            <p className="text-base text-gray-600 leading-relaxed">
+            <p className="text-base text-slate-500 leading-relaxed">
               Sistem absensi modern mengatasi tantangan kritis yang berdampak pada operasional sekolah dan kemampuan monitoring waktu nyata.
             </p>
           </motion.div>
@@ -72,16 +71,16 @@ export default function Problems() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15, ease: 'easeOut' }}
-                className={`w-full sm:w-[85%] relative bg-white p-5 rounded-2xl shadow-xl shadow-gray-200/40 border border-gray-100 flex gap-4 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-gray-200/60 ${problem.align}`}
+                className={`w-full sm:w-[85%] relative bg-white p-5 rounded-2xl shadow-sm border border-slate-100 flex gap-4 transition-all duration-300 hover:shadow-md hover:border-slate-200 ${problem.align}`}
               >
                 <div className={`w-12 h-12 rounded-xl ${problem.bgLight} border ${problem.borderColor} flex items-center justify-center flex-shrink-0`}>
                   <problem.icon className={`w-6 h-6 ${problem.color}`} strokeWidth={1.5} />
                 </div>
                 <div className="flex flex-col justify-center gap-1">
-                  <h3 className="text-base font-bold text-gray-900 font-display">
+                  <h3 className="text-base font-bold text-slate-800 font-display">
                     {problem.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-sm text-slate-500 leading-relaxed">
                     {problem.description}
                   </p>
                 </div>

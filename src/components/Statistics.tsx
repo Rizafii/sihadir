@@ -72,11 +72,11 @@ export default function Statistics() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
         >
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-gray-900 mb-4 leading-[1.2] tracking-tight">
-            Solusi Kehadiran <span className="text-blue-600">Digital</span> yang Telah Teruji
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-[2.25rem] font-bold text-slate-800 mb-4 leading-[1.2] tracking-tight">
+            Solusi Kehadiran <span className="text-blue-500">Digital</span> yang Telah Teruji
           </h2>
-          <p className="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed max-w-xl mx-auto">
-            Angka yang berbicara tentang bagaimana <span className="text-blue-600 font-semibold">Si</span>Hadir mentransformasi sistem absensi konvensional menjadi lebih cerdas.
+          <p className="text-[14px] lg:text-[15px] text-slate-500 leading-relaxed max-w-xl mx-auto">
+            Angka yang berbicara tentang bagaimana <span className="text-blue-500 font-semibold">Si</span>Hadir mentransformasi sistem absensi konvensional menjadi lebih cerdas.
           </p>
         </motion.div>
 
@@ -91,15 +91,15 @@ export default function Statistics() {
               className="text-center flex-1 min-w-[200px]"
             >
               {/* Counter */}
-              <div className="text-[2rem] lg:text-[2.25rem] font-bold font-display text-gray-900 mb-3">
+              <div className="text-[2rem] lg:text-[2.25rem] font-bold font-display text-slate-800 mb-3">
                 <Counter target={stat.value} suffix={stat.suffix} isInView={isInView} />
               </div>
-              <div className="text-[13px] lg:text-[14px] font-medium text-gray-800 mb-1">{stat.label}</div>
-              <div className="text-[12px] lg:text-[13px] text-gray-600">
+              <div className="text-[13px] lg:text-[14px] font-medium text-slate-700 mb-1">{stat.label}</div>
+              <div className="text-[12px] lg:text-[13px] text-slate-500">
                 {stat.description.split('SiHadir').map((part, i, arr) => (
                   <span key={i}>
                     {part}
-                    {i < arr.length - 1 && <span><span className="text-blue-600 font-semibold">Si</span>Hadir</span>}
+                    {i < arr.length - 1 && <span><span className="text-blue-500 font-semibold">Si</span>Hadir</span>}
                   </span>
                 ))}
               </div>
