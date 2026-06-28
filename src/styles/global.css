@@ -58,17 +58,34 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-behavior: auto;
+  scroll-padding-top: 96px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-dark-950);
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: #334155;
-  background: #ffffff;
+  background:
+    radial-gradient(circle at top left, rgba(99, 102, 241, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(6, 182, 212, 0.12), transparent 28%),
+    linear-gradient(135deg, #f8fbff 0%, #f5f7ff 45%, #fefefe 100%);
   overflow-x: hidden;
+  min-height: 100vh;
+  overscroll-behavior-y: none;
+  transition: background 0.3s ease;
+}
+
+main,
+section {
+  position: relative;
+  isolation: isolate;
+}
+
+html.lenis-smooth {
+  scroll-behavior: auto;
 }
 
 ::selection {
